@@ -128,26 +128,20 @@ while running:
 			print(f'it took you {tries} tries')
 
 			# high scores
-			if max not in high_scores:
+			if str(max) not in high_scores:
 				high_scores[str(max)] = tries
-			elif max in high_scores and tries < high_scores[max]:
+			elif str(max) in high_scores and tries < high_scores[str(max)]:
 				high_scores[str(max)] = tries
 		
 			print(f'your best was {high_scores[str(max)]}')
 			guessing = False
 		elif guess > max:
 			print('OUT OF RANGE')
-		elif guess > num:
+		elif guess > num or guess < num:
 			if guess not in guesses:
 				tries += 1
 				guesses.append(guess)
 			else:
 				print('you already guessed that')
-			print('lower')
-		elif guess < num:
-			if guess not in guesses:
-				tries += 1
-				guesses.append(guess)
-			else:
-				print('you already guessed that')
-			print('higher')
+			text = 'higher' if guess < num else 'lower'
+			print(text)
