@@ -7,6 +7,7 @@ The whole script runs in the terminal.
 
 
 # How to Play
+Start by simply running the `.py` file using your favourite terminal or python shell
 - choose a difficulty
   - easy: 1-100
   - medium: 1-1000
