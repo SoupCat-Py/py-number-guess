@@ -38,4 +38,4 @@ If it does not exist, one will be created for you. <br />
 You may change the value of the `json_path` variable if you already have one named that for whatever reason
 
 ### ANOTHER NOTE:
-If, for whatever reason, you are using a terminal that does not support using `os._exit(0)` (such as programiz), change that line in the `save_and_close()` function to `quit()`
+Use the code in the `browser` branch if you are using an online compiler, such as Programiz.
