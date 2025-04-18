@@ -36,6 +36,4 @@ In the guessing phase, you can type `give up` to reveal the number and end the r
 You can also close the program at any time with `close`, `exit`, or `quit`.
 
 ### NOTE:
-This program will reference a file named `numguess_hs.json` in your Downloads folder. <br />
-If it does not exist, one will be created for you. <br />
-You may change the value of the `json_path` variable if you already have one named that for whatever reason
+On **this branch**(web), your high scores will not be saved to a `.json` file.
