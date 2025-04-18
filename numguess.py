@@ -11,7 +11,7 @@ diffs = {
 	'insane' : 1000000
 }
 
-json_path = os.path.expanduser('~/numguess_hs.json')
+json_path = os.path.expanduser('~/Downloads/numguess_hs.json')
 
 def load_hs():
 	global high_scores
