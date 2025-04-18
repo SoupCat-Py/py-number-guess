@@ -6,7 +6,7 @@ This was made using a chromebook out of pure boredom so I wasn't able to import 
 The whole script runs in the terminal.
 
 ### NOTE:
-Use the script in the `main` branch if you are using a terminal (file saving)
+Use the script in the `main` branch if you are using a terminal (file saving) <br />
 Use the script in the `web` branch if you are using a web-based compiler, such as programiz
 
 # How to Play
