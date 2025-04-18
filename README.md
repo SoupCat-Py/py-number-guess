@@ -5,6 +5,9 @@ Well I've basically made that in python but everything is a little more complica
 This was made using a chromebook out of pure boredom so I wasn't able to import any libraries. <br />
 The whole script runs in the terminal.
 
+### NOTE:
+Use the script in the `main` branch if you are using a terminal (file saving)
+Use the script in the `web` branch if you are using a web-based compiler, such as programiz
 
 # How to Play
 Start by simply running the `.py` file using your favourite terminal or python shell
@@ -33,9 +36,6 @@ In the guessing phase, you can type `give up` to reveal the number and end the r
 You can also close the program at any time with `close`, `exit`, or `quit`.
 
 ### NOTE:
-This program will reference a file named `numguess_hs.json` in your ROOT directory. <br />
+This program will reference a file named `numguess_hs.json` in your Downloads folder. <br />
 If it does not exist, one will be created for you. <br />
 You may change the value of the `json_path` variable if you already have one named that for whatever reason
-
-### ANOTHER NOTE:
-Use the code in the `browser` branch if you are using an online compiler, such as Programiz.
