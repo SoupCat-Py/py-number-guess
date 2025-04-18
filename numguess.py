@@ -13,9 +13,14 @@ diffs = {
 
 json_path = os.path.expanduser('~/Downloads/numguess_hs.json')
 
+
 def load_hs():
 	global high_scores
-	if os.path.exists(json_path):
+	if not os.path.exists(json_path) or os.path.getsize(json_path) == 0:
+		with open(json_path, 'x') as file:
+			json.dump({},file)
+			high_scores = {}
+	else:
 		with open(json_path,'r') as file:
 			high_scores = json.load(file)
 
