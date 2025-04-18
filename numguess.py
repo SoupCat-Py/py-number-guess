@@ -81,6 +81,8 @@ while running:
 	max = get_diff()
 	
 	num = rand(0,max)
+	while num % 10 == 0:
+		num = rand(0,max)
 	line()
 
 	# the actual game
