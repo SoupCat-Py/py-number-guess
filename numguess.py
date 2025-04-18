@@ -2,7 +2,6 @@
 # copyright (c) 2025 Soup Cat
 
 from random import randint as rand
-import os, json
 
 diffs = {
 	'easy'	: 100,
@@ -11,28 +10,7 @@ diffs = {
 	'insane' : 1000000
 }
 
-json_path = os.path.expanduser('~/numguess_hs.json')
-
-def load_hs():
-	global high_scores
-	if os.path.exists(json_path):
-		with open(json_path,'r') as file:
-			high_scores = json.load(file)
-
-load_hs()
-
-def save_hs():
-	global high_scores
-	if os.path.exists(json_path):
-		with open(json_path,'w') as file:
-			json.dump(high_scores, file)
-	else:
-		with open(json_path,'x') as file:
-			file.close()
-
-def save_and_close():
-	save_hs()
-	os._exit(0)
+high_scores = {}
 
 def get_num():
 	asking = True
@@ -63,7 +41,7 @@ def get_diff():
 				return int(diff_in)
 			except:
 				if diff_in.lower() in ['exit','quit','close']:
-					save_and_close()
+					quit()
 				elif 'hs' in diff_in.lower():
 					in_list = diff_in.lower().split(' ')
 					if high_scores == {}:
@@ -82,7 +60,6 @@ def get_diff():
 						elif in_list[1].lower() in ['clear','delete']:
 							if 'y' in input('are you sure??? '):
 								high_scores = {}
-								save_hs()
 								print('high scores cleared')
 				elif 'help' in diff_in.lower():
 					print('close program       - "close" or "quit" or "exit"')
@@ -119,7 +96,7 @@ while running:
 			print(f'the number was {num}')
 			guessing = False
 		elif guess in ['exit','quit','close']:
-			save_and_close()
+			quit()
 		
 		elif guess == num:
 			tries += 1
