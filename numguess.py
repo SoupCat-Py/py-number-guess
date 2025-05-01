@@ -69,7 +69,9 @@ def get_diff():
 
 def line():
 	print('')
-				
+
+def sort_hs():
+	return {k: high_scores[k] for k in sorted(high_scores, key=lambda x: int(x))}
 
 # main loop
 running = True
@@ -105,14 +107,17 @@ while running:
 			line()
 			print('YOU WIN!')
 			print(f'it took you {tries} tries')
+			print(f'your best was {high_scores[str(max)]}')
 
 			# high scores
 			if str(max) not in high_scores:
 				high_scores[str(max)] = tries
+				print('NEW HIGH SCORE!')
 			elif str(max) in high_scores and tries < high_scores[str(max)]:
 				high_scores[str(max)] = tries
-		
-			print(f'your best was {high_scores[str(max)]}')
+				print('NEW HIGH SCORE!')
+
+			high_scores = sort_hs()
 			guessing = False
 		elif guess > max:
 			print('OUT OF RANGE')
