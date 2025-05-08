@@ -136,7 +136,6 @@ while running:
 			line()
 			print('YOU WIN!')
 			print(f'it took you {tries} tries')
-			print(f'your best was {high_scores[str(max)]}')
 
 			# high scores
 			if str(max) not in high_scores:
@@ -146,6 +145,7 @@ while running:
 				high_scores[str(max)] = tries
 				print('NEW HIGH SCORE!')
 
+			print(f'your best was {high_scores[str(max)]}')
 			high_scores = sort_hs()
 			guessing = False
 		elif guess > max:
