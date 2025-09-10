@@ -94,9 +94,13 @@ def get_diff():
 					print('see the number      - "give up"')
 					print('all high scores     - "hs"')
 					print('specific high score - "hs [max]"')
+     
 
 def line():
 	print('')
+ 
+def clear():
+    os.system('cls' if os.name == 'nt' else 'clear')
  
 def sort_hs():
 	return {k: high_scores[k] for k in sorted(high_scores, key=lambda x: int(x))}
@@ -119,6 +123,7 @@ while running:
 	# the actual game
 	guessing = True
 	tries = 0
+	clear()
 	print(f'Guess a number from 1 to {max}')
 	guesses = []
 	while guessing:
